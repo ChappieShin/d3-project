@@ -1,0 +1,86 @@
+svg {
+    background-color: #f5f3f2;
+}
+
+.tick line {
+    stroke: #c0c0bb;
+}
+
+.tick text {
+    fill: #8e8883;
+}
+
+.domain text {
+    fill: #635f5d;
+    cursor: default;
+}
+
+.axis-label {
+    font-size: 1.25em;
+    font-weight: 600;
+    fill: #635f5d;
+}
+
+.slider-container {
+    position: absolute;
+    top: 340px;
+    right: 60px;
+    transform: translate(0, -50%);
+}
+
+.slider-container p {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #635f5d;
+}
+
+.slider-container label {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #635f5d;
+}
+
+.slider {
+    width: 200px;
+}
+
+.dataSummary-container text {
+    fill: #635f5d;
+}
+
+.dataSummary-year {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.dataSummary-rates {
+    font-size: 1em;
+}
+
+#min-rate {
+    fill: #bd2d28;
+}
+
+#max-rate {
+    fill: #156b90;
+}
+
+#avg-rate {
+    fill: #708259;
+}
+
+.Dropdown-root {
+    width: 290px;
+    font-size: 0.8em;
+}
+
+.dropdown-container {
+    position: absolute;
+    top: 475px;
+    right: 30px;
+    transform: translate(0, -50%);
+}
+
+.dropdown-container label {
+    color: #635f5d;
+}

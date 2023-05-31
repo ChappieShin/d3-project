@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f5f3f2;
+}
+
+.text {
+    height: 55vh;
+}
+  
+h1 {
+    font-size: 30px;
+}
+  
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Navbar } from './components/Navbar';
+import { Home } from './routes/Home';
+import { BarChart } from './routes/BarChart';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export const App = () => (
+  <HashRouter>
+    <Navbar />
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/bar_chart' element={<BarChart />} />
+      {/* <Route path='/line_chart' element={<LineChart />} />
+      <Route path='/scatter_plot' element={<ScatterPlot />} />
+      <Route path='/choropleth_map' element={<ChoroplethMap />} /> */}
+    </Routes>
+    <Tooltip id='barChart-tooltip' />
+  </HashRouter>
+);
