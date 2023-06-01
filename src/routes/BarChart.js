@@ -106,8 +106,7 @@ export const BarChart = () => {
                     yearMin={yearMin} 
                     yearMax={yearMax} 
                     yearValue={yearValue} 
-                    onYearValueChange={setYearValue} 
-                    data={data} 
+                    onYearValueChange={setYearValue}
                 />
                 <div className='dropdown-container'>
                     <label>Series:</label>
