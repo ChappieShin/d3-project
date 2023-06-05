@@ -1,13 +1,13 @@
 import { minIndex, maxIndex, mean } from 'd3';
 
 export const DataSummary = ({data, dropdownValue, colorScale}) => {
-    const minDataIndex = minIndex(data, (d) => d[dropdownValue]);
-    const maxDataIndex = maxIndex(data, (d) => d[dropdownValue]);
+    const minDataIndex = minIndex(data, (d) => +d[dropdownValue]);
+    const maxDataIndex = maxIndex(data, (d) => +d[dropdownValue]);
     const minData = data[minDataIndex][dropdownValue];
     const maxData = data[maxDataIndex][dropdownValue];
     const minCountry = data[minDataIndex].Country;
     const maxCountry = data[maxDataIndex].Country;
-    const avgData = mean(data, (d) => d[dropdownValue]);
+    const avgData = mean(data, (d) => +d[dropdownValue]);
     const yearData = data[0].Year;
 
     return (

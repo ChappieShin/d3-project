@@ -1,20 +1,22 @@
 import { useEffect, useRef } from 'react';
-import { select, easeCubicInOut } from 'd3';
+import { select, easeCubic } from 'd3';
 
 export const Marks = ({data, subgroups, xScale, yScale, ySubgroup, colorScale, hoveredValue, fadeOpacity, onTooltip, tooltipValue}) => {
     const rectRefs = useRef([]);
     
     useEffect(() => {
-        rectRefs.current.forEach((row, i) => {
-            row.forEach((ref, j) => {
-                select(ref)
-                .transition()
-                .duration(800)
-                .ease(easeCubicInOut)
-                .attr('width', xScale(data[i][subgroups[j]]));
+        if (rectRefs.current.every((row) => row.every((ref) => ref))) {
+            rectRefs.current.forEach((row, i) => {
+                row.forEach((ref, j) => {
+                    select(ref)
+                    .transition()
+                    .duration(800)
+                    .ease(easeCubic)
+                    .attr('width', xScale(data[i][subgroups[j]]));
+                });
             });
-        });
-    }, [data, subgroups, xScale]);
+        }
+    }, [data, xScale]);
 
     return (
         data.map((d, i) => (
@@ -28,11 +30,11 @@ export const Marks = ({data, subgroups, xScale, yScale, ySubgroup, colorScale, h
                         height={ySubgroup.bandwidth()} 
                         fill={colorScale(subgroup)}
                         opacity={((hoveredValue && subgroup !== hoveredValue) || (tooltipValue && d[subgroup] !== tooltipValue)) ? fadeOpacity : 1}
-                        onMouseEnter={() => {onTooltip(d[subgroup])}}
-                        onMouseLeave={() => {onTooltip(null)}}
+                        onMouseEnter={() => onTooltip(d[subgroup])}
+                        onMouseLeave={() => onTooltip(null)}
                         data-tooltip-id='barChart-tooltip'
                         data-tooltip-html={`Country: <strong>${d.Country}</strong> <br /> Year: <strong>${d.Year}</strong> <br /> Inflation Rates: <strong>${d[subgroup]}</strong>`}
-                        ref={(el) => {!rectRefs.current[i] ? rectRefs.current[i] = [] : rectRefs.current[i][j] = el}}
+                        ref={(ref) => {!rectRefs.current[i] ? rectRefs.current[i] = [] : rectRefs.current[i][j] = ref}}
                     />
                 ))}
             </g>

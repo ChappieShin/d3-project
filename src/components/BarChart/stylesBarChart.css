@@ -1,86 +1,90 @@
-svg {
+.barchart svg {
     background-color: #f5f3f2;
 }
 
-.tick line {
+.barchart .tick line {
     stroke: #c0c0bb;
 }
 
-.tick text {
+.barchart .tick text {
     fill: #8e8883;
 }
 
-.domain text {
+.barchart .domain text {
     fill: #635f5d;
-    cursor: default;
 }
 
-.axis-label {
+.barchart .axis-label {
     font-size: 1.25em;
     font-weight: 600;
     fill: #635f5d;
 }
 
-.slider-container {
+.barchart .color-legend text {
+    fill: #635f5d;
+    cursor: default;
+}
+
+.barchart .slider-container {
     position: absolute;
     top: 340px;
     right: 60px;
     transform: translate(0, -50%);
 }
 
-.slider-container p {
+.barchart .slider-container p {
     font-size: 1.25em;
     font-weight: 600;
     color: #635f5d;
 }
 
-.slider-container label {
+.barchart .slider-container label {
     font-size: 0.8em;
     font-weight: 600;
     color: #635f5d;
 }
 
-.slider {
+.barchart .slider {
     width: 200px;
 }
 
-.dataSummary-container text {
+.barchart .dataSummary-container text {
     fill: #635f5d;
 }
 
-.dataSummary-year {
+.barchart .dataSummary-year {
     font-size: 1.8em;
     font-weight: 600;
 }
 
-.dataSummary-rates {
+.barchart .dataSummary-rates {
     font-size: 1em;
 }
 
-#min-rate {
+.barchart #min-rate {
     fill: #bd2d28;
 }
 
-#max-rate {
+.barchart #max-rate {
     fill: #156b90;
 }
 
-#avg-rate {
+.barchart #avg-rate {
     fill: #708259;
 }
 
-.Dropdown-root {
+.barchart .Dropdown-root {
     width: 290px;
     font-size: 0.8em;
 }
 
-.dropdown-container {
+.barchart .dropdown-container {
     position: absolute;
-    top: 475px;
-    right: 30px;
+    top: 485px;
+    right: 40px;
     transform: translate(0, -50%);
 }
 
-.dropdown-container label {
+.barchart .dropdown-container label {
     color: #635f5d;
 }

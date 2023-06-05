@@ -5,7 +5,16 @@ export const YearSlider = ({yearMin, yearMax, yearValue, onYearValueChange}) => 
     <div className='slider-container'>
       <p>Year</p>
       <label>{yearMin}</label>
-      <input className='slider' type='range' min={yearMin} max={yearMax} step={1} value={parseInt(yearValue)} onChange={(event) => onYearValueChange(event.target.value)} list='ticks' />
+      <input 
+        className='slider' 
+        type='range' 
+        min={yearMin} 
+        max={yearMax} 
+        step={1} 
+        value={+yearValue} 
+        onChange={(event) => onYearValueChange(event.target.value)} 
+        list='ticks'
+      />
       <label>{yearMax}</label>
       <datalist id='ticks'>
         {yearRange.map((d) => (

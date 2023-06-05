@@ -1,0 +1,85 @@
+.linechart svg {
+    background-color: #f5f3f2;
+}
+
+.linechart .tick line {
+    stroke: #c0c0bb;
+}
+
+.linechart .tick text {
+    fill: #8e8883;
+}
+
+.linechart .axis-label {
+    font-size: 1.25em;
+    font-weight: 600;
+    fill: #635f5d;
+}
+
+.linechart .marks path {
+    fill: none;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.linechart .marks circle {
+    stroke: white;
+    stroke-width: 1.5;
+}
+
+.linechart .marks #text-line {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.linechart .marks #text-tooltip {
+    font-size: 1em;
+}
+
+.linechart .checkbox-container {
+    position: absolute;
+    top: 240px;
+    right: 185px;
+    transform: translate(0, -50%);
+}
+
+.linechart .checkbox-container .checkbox {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.linechart .checkbox-container p {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #635f5d;
+}
+
+.linechart .checkbox-container label {
+    font-size: 1em;
+    color: #635f5d;
+    margin-left: 5px;
+}
+
+.linechart .Dropdown-root {
+    width: 290px;
+    font-size: 0.8em;
+}
+
+.linechart .dropdown-container {
+    position: absolute;
+    top: 455px;
+    right: 45px;
+    transform: translate(0, -50%);
+}
+
+.linechart .dropdown-container p {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #635f5d;
+}
+
+.linechart .voronoi {
+    fill: none;
+    pointer-events: all;
+}
